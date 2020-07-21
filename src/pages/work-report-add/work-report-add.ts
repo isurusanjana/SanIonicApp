@@ -203,7 +203,7 @@ export class WorkReportAddPage {
                       this.presentLoadingDefault();
                       this.http.post(this.api.apiUrl + 'photo', photoData, {
                           "authorization": authenticateHeader,
-                          "Access-Control-Allow-Origin": "https://accsapp.com",
+                          "Access-Control-Allow-Origin": "https://test.com",
                           "accept": "application/json",
                           "content-type": "application/x-www-form-urlencoded; charset=utf-8",
                           "cache-control": "no-cache",
@@ -254,7 +254,7 @@ export class WorkReportAddPage {
                       this.presentLoadingDefault();
                       this.http.post(this.api.apiUrl + 'photo', photoData, {
                           "authorization": authenticateHeader,
-                          "Access-Control-Allow-Origin": "https://accsapp.com",
+                          "Access-Control-Allow-Origin": "https://test.com",
                           "accept": "application/json",
                           "content-type": "application/x-www-form-urlencoded; charset=utf-8",
                           "cache-control": "no-cache",

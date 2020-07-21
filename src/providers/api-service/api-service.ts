@@ -12,8 +12,7 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 export class ApiServiceProvider {
 
-  public apiUrl = 'http://accs.anchortek.com/api/';
-  // public apiUrl = 'https://accsapp.com/api/';
+  public apiUrl = 'http://www.test.test/api/';
   public loading: any;
 
   constructor(
