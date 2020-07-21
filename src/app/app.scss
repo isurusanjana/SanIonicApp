@@ -1,0 +1,152 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+ion-content{
+  background:url(../assets/imgs/bglogo.png) no-repeat center;background-size:cover;
+}
+
+.input-item{
+  padding-left: 5px;
+  padding-right: 5px;
+  background: transparent;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.social-login-container{
+  text-align: center;
+}
+
+.full{
+  width: 100%;
+}
+
+.half{
+  width: 50%;
+}
+
+.float-left{
+  float: left;
+}
+
+.menu-icon{
+  font-size: 2em;
+  font-weight: bold;
+  color: #03a9f4;
+}
+
+.home-header{
+  background: linear-gradient(to bottom right, #03a9f4, #03a9f4);
+  //background: linear-gradient(to bottom right, #3B5998, #8b9dc3);
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.profile-image{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.description{
+  font-weight: normal;
+  font-size: 12px;
+  color: white;
+}
+
+.main-navbar{
+  background: linear-gradient(to bottom, #3B5998, #1DA1F2);
+}
+
+.transparent{
+  background-color: transparent;
+}
+
+ion-navbar.toolbar .toolbar-background{
+  background: transparent;
+  color: white;
+}
+
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default, .toolbar-title-md{
+  color: white;
+}
+
+.picker-md .picker-opt{
+  font-size: 20px;
+}
+
+.form-header.list-header-md, .form-header.list-header-ios{
+  padding-left: 5px;
+  text-align: center;
+  font-size: large;
+}
+
+.form-header.list-header-md .input-wrapper{
+  border-bottom: 1px #c4c4c4 solid;
+}
+
+.photos{
+  width:100%;
+}
+
+.photo-left{
+  width: 100%;
+}
+
+.photo-right{
+  width: 100%;
+}
+
+.photo-left .card-md, .photo-right .card-md, .photo-left .card-ios, .photo-right .card-ios {
+  background: transparent;
+  box-shadow: unset;
+}
+
+.photo-left ion-card , .photo-right ion-card {
+  position: relative;
+  text-align: center;
+}
+
+.card-title {
+  position: absolute;
+  top: 36%;
+  font-size: 20px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.card-subtitle {
+  font-size: 12px;
+  position: absolute;
+  top: 52%;
+  width: 100%;
+}
+
+.light-text{
+  color: #f4f4f4;
+}
+
+.danger-text{
+  color: #DB4437;
+}
+
+//-----------------------------IOS back button -----------------------------------
+
+.back-button-ios{
+  color: white;
+}

@@ -1,0 +1,130 @@
+<ion-content padding id="page2">
+  <div class="spacer" style="width:300px;height:10px;" id="start-spacer1"></div>
+  <img src="assets/imgs/icon.png" style="display:block;width:25%;height:auto;margin-left:auto;margin-right:auto;" />
+  <h3 id="start-heading2" style="color:#317D94;text-align:center;">
+    ACCS APP
+  </h3>
+  <div id="register-container4">
+    <h5 id="start-heading1" style="color:#134968;text-align:center;font-size:12px;">
+      Register if you don't have an Account
+    </h5>
+    <form id="register-form4" [formGroup]="registerForm" (ngSubmit)="doRegister()">
+      <ion-item id="register-input5" class="input-item">
+        <ion-label floating>
+          First Name
+        </ion-label>
+        <ion-input type="text" placeholder="" formControlName="first_name"></ion-input>
+      </ion-item>
+      <div *ngFor="let error of errorMessages.first_name">
+        <ng-container *ngIf="first_name.hasError(error.type) && (first_name.dirty || first_name.touched)">
+          <small class="error-message" style="color:#FF0000;">{{error.message}}</small>
+        </ng-container>
+      </div>
+
+      <div class="spacer" style="width:300px;height:5px;" id="register-spacer10"></div>
+      <ion-item id="register-input6" class="input-item">
+        <ion-label floating>
+          Last Name
+        </ion-label>
+        <ion-input type="text" placeholder="" formControlName="last_name"></ion-input>
+      </ion-item>
+      <div *ngFor="let error of errorMessages.last_name">
+        <ng-container *ngIf="last_name.hasError(error.type) && (last_name.dirty || last_name.touched)">
+          <small class="error-message" style="color:#FF0000;">{{error.message}}</small>
+        </ng-container>
+      </div>
+
+      <div class="spacer" style="width:300px;height:5px;" id="register-spacer9"></div>
+      <ion-item id="register-input7" class="input-item">
+        <ion-label floating>
+          Email Address
+        </ion-label>
+        <ion-input type="email" placeholder="" formControlName="email" [(ngModel)]="loginUsername"></ion-input>
+      </ion-item>
+      <div *ngFor="let error of errorMessages.email">
+        <ng-container *ngIf="email.hasError(error.type) && (email.dirty || email.touched)">
+          <small class="error-message" style="color:#FF0000;">{{error.message}}</small>
+        </ng-container>
+      </div>
+
+      <div class="spacer" style="width:300px;height:5px;" id="register-spacer5"></div>
+      <ion-item id="register-input8" class="input-item">
+        <ion-label floating>
+          Password
+        </ion-label>
+        <ion-input type="password" placeholder="" formControlName="password" [(ngModel)]="loginPassword" minLength="6"></ion-input>
+      </ion-item>
+      <div *ngFor="let error of errorMessages.password">
+        <ng-container *ngIf="password.hasError(error.type) && (password.dirty || password.touched)">
+          <small class="error-message" style="color:#FF0000;">{{error.message}}</small>
+        </ng-container>
+      </div>
+
+      <ion-item id="register-input9" class="input-item">
+        <ion-label floating>
+          Confirm Password
+        </ion-label>
+        <ion-input type="password" placeholder="" formControlName="c_password"></ion-input>
+      </ion-item>
+      <div *ngFor="let error of errorMessages.c_password">
+        <ng-container *ngIf="c_password.hasError(error.type) && (c_password.dirty || c_password.touched)">
+          <small class="error-message" style="color:#FF0000;">{{error.message}}</small>
+        </ng-container>
+      </div>
+    
+      <div class="spacer" style="width:300px;height:10px;" id="register-spacer5"></div>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2>
+            <div style="display: table">
+                <div style="display: table-cell;padding-right: 5px;">
+                  <ion-checkbox color="primary" formControlName="condition_check" required></ion-checkbox>
+                </div>
+                <div style="display: table-cell">
+                  <ion-label stacked>I accept the <a  href="https://accsapp.com/terms-and-conditions">User Agreement</a></ion-label>
+                </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div *ngFor="let error of errorMessages.condition_check">
+        <ng-container *ngIf="condition_check.hasError(error.type) && (condition_check.dirty || condition_check.touched)">
+          <small class="error-message" style="color:#FF0000;">{{error.message}}</small>
+        </ng-container>
+      </div>
+
+      <div class="spacer" style="width:300px;height:10px;" id="register-spacer12"></div>
+      <button type="submit" id="register-button8" ion-button color="positive" block style="font-weight:600;font-size:15px;border-radius:0px 0px 0px 0px;" class="login-btn" [disabled]="!registerForm.valid">
+        Register
+      </button>
+    </form>
+    <div id="start-markdown9" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#134968;font-size:12px;">
+        OR You can login with ACCS
+      </p>
+    </div>
+    <button id="start-button2" ion-button outline color="primary" block small style="font-weight:500;font-size:15px;border-radius:0px 0px 0px 0px;" class="register-btn" on-click="goToStart()">
+      Login Here
+    </button>
+    <!-- <div id="start-markdown10" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#134968;font-size:10px;">
+        OR You can Sign in using
+      </p>
+    </div>
+    <div id="start-container3" class="social-login-container">
+      <button id="start-button5" ion-button clear color="secondary" small icon-left style="border-radius:0px 0px 0px 0px;" class="google-btn">
+        <ion-icon name="logo-google"></ion-icon>
+        Google
+      </button>
+      <button id="start-button4" ion-button clear color="primary" small icon-left style="border-radius:0px 0px 0px 0px;" class="facebook-btn">
+        <ion-icon name="logo-facebook"></ion-icon>
+        Facebook
+      </button>
+      <button id="start-button3" ion-button clear color="danger" small icon-left style="border-radius:0px 0px 0px 0px;" class="twiter-btn">
+        <ion-icon name="logo-twitter"></ion-icon>
+        Twiter
+      </button>
+    </div> -->
+  </div>
+</ion-content>

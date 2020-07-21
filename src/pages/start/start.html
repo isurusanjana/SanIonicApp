@@ -1,0 +1,89 @@
+<ion-content padding  id="page1">
+  <div class="spacer" style="width:300px;height:10px;" id="start-spacer1"></div>
+  <img src="assets/imgs/icon.png" style="display:block;width:25%;height:auto;margin-left:auto;margin-right:auto;" />
+  <h3 id="start-heading2" style="color:#317D94;text-align:center;">
+    ACCS APP
+  </h3>
+  <div id="start-container2" class="login-container">
+    <h5 id="start-heading1" style="color:#134968;text-align:center;font-size:12px;">
+      Login if you have an Account
+    </h5>
+    <form id="start-form2" [formGroup]="loginForm" (ngSubmit)="doLogin()">
+      <ion-item id="start-input3" class="input-item">
+        <ion-label floating>
+          Email Address
+        </ion-label>
+        <ion-input type="email" placeholder="" formControlName="email" value="" [(ngModel)]="loginUsername"></ion-input>
+      </ion-item>
+      <div *ngFor="let error of errorMessages.email">
+        <ng-container *ngIf="email.hasError(error.type) && (email.dirty || email.touched)">
+          <small class="error-message" style="color:#FF0000;">{{error.message}}</small>
+        </ng-container>
+      </div>
+
+      <div class="spacer" style="width:300px;height:5px;" id="start-spacer3"></div>
+      <ion-item id="start-input4" class="input-item">
+        <ion-label floating>
+          Password
+        </ion-label>
+        <ion-input type="password" placeholder="" formControlName="password" [(ngModel)]="loginPassword"></ion-input>
+      </ion-item>
+      <div *ngFor="let error of errorMessages.password">
+        <ng-container *ngIf="password.hasError(error.type) && (password.dirty || password.touched)">
+          <small class="error-message" style="color:#FF0000;">{{error.message}}</small>
+        </ng-container>
+      </div>
+      
+      <div class="spacer" style="width:300px;height:10px;" id="register-spacer12"></div>
+      <div style="display: flex;">
+        <div style="width: 50%;align-content: flex-start;float: left;display: flex;">
+          <div style="display: table">
+            <div style="display: table-cell;padding-right: 5px;">
+              <ion-checkbox color="primary" formControlName="rememberMe" [(ngModel)]="loginRemember"></ion-checkbox>
+            </div>
+            <div style="display: table-cell">
+              <ion-label stacked>Remember me</ion-label>
+            </div>
+        </div>
+        </div>
+        <div style="width: 50%;align-content: flex-end;">
+          <a id="start-button7" ion-button clear color="danger" block small style="align-content: flex-end;font-size:12px;text-decoration: underline;align-self: flex-end;" class="forgot-password-btn" (click)="goToForgotPassword()">
+            Forgot Password?
+          </a>
+        </div>
+      </div>
+      <div class="spacer" style="width:300px;height:10px;" id="register-spacer12"></div>
+      <button [disabled]="!loginForm.valid" type="submit" id="start-button1" ion-button color="primary" block style="font-weight:600;font-size:15px;border-radius:0px 0px 0px 0px;" class="login-btn">
+        Login
+      </button>
+    </form>
+    
+    <div id="start-markdown9" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#134968;font-size:12px;">
+        OR You can register with ACCS
+      </p>
+    </div>
+    <button id="start-button2" ion-button outline color="primary" block small style="font-weight:500;font-size:15px;border-radius:0px 0px 0px 0px;" class="register-btn" (click)="goToRegister()">
+      Register Here
+    </button>
+    <!-- <div id="start-markdown10" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#134968;font-size:10px;">
+        OR You can Sign in using
+      </p>
+    </div>
+    <div id="start-container3" class="social-login-container">
+      <button id="start-button5" ion-button clear color="secondary" small icon-left style="border-radius:0px 0px 0px 0px;" class="google-btn">
+        <ion-icon name="logo-google"></ion-icon>
+        Google
+      </button>
+      <button id="start-button4" ion-button clear color="primary" small icon-left style="border-radius:0px 0px 0px 0px;" class="facebook-btn">
+        <ion-icon name="logo-facebook"></ion-icon>
+        Facebook
+      </button>
+      <button id="start-button3" ion-button clear color="danger" small icon-left style="border-radius:0px 0px 0px 0px;" class="twiter-btn">
+        <ion-icon name="logo-twitter"></ion-icon>
+        Twiter
+      </button>
+    </div> -->
+  </div>
+</ion-content>
