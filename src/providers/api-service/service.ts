@@ -9,9 +9,8 @@ import { ApiServiceProvider } from './api-service';
 
 @Injectable()
 export class Services {
-
-    public baseUrl = 'http://accs.anchortek.com/api/';
-    // public baseUrl = 'http://test.com/api/';
+    
+    public baseUrl = 'http://test.com/api/';
     
     alert: any;
     constructor(public http: Http, private API : ApiServiceProvider,
